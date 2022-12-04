@@ -1,7 +1,6 @@
 # Deploying the full three-tier application 
 
 ## Requirements
----
 | Name  | Version |
 | ------ | ------ |
 | Terraform | >=4.0 |
