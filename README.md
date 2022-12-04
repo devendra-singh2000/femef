@@ -108,4 +108,4 @@ terraform destroy
 
 ## Author
 ----
-Module managed by [Devendra Singh](https://github.com/tothenew)
+Module managed by [Devendra Singh](https://github.com/devendra-singh2000)
