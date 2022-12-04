@@ -9,8 +9,6 @@
 
 
 ##  Infrastructure Setup 
-#
----
 | Number | Name |
 | ------ | ------|
 | 1 | VPC |
@@ -23,23 +21,19 @@
 |2 | Public EC2 instances (representing our presentation tier) |
 | 1 | Nat Gateways (so private instances can connect to the internet) |
 | 1 | Elastic IP addresses |
-|2 | rds instance |
+| 2 | rds instance |
 
 #  Our Application 
----
 Our application consists of 3 tiers 
  -  presentation tier (this represents normally the customer facing part of the application, so what the customer interacts with)
  -  Application tier (this is where we have our business logics)
 
  -  To keep it simple, our presentation tier simply forward requests to the business tier, that in turn run sql queries on the rds instance.
 ## Providers
----
 AWS
 
 
 ## Modules
-#
----
 | Name | Description |
 | ------ | ------ |
 | vpc | To create VPC for our infrastructure |
@@ -52,8 +46,6 @@ AWS
 
 
 ##   Resources 
-#
----
 | Name | Type |
 |------|------|
 | [aws_vpc](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
@@ -81,9 +73,6 @@ AWS
 | [aws_launch_template](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 
 ## Outputs
-#
----
-
 | Name | Description |
 |------|-------------|
 | Load  balancer DNS | `NA` |
@@ -95,7 +84,6 @@ AWS
 
 
 ##  Deploying the infrastructure + application 
----
 First initialise the backend, and install the aws plugin and prepare terraform.:
 
 ```sh
